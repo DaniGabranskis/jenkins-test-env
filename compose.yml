@@ -1,0 +1,13 @@
+version: "3.9"
+
+volumes:
+  jenkins_volume:
+
+services:
+  jenkins:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - jenkins_volume:/var/jenkins_home
+
